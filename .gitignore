@@ -18,6 +18,9 @@ gradle-app.setting
 # Ignore Gradle build output directory
 build
 
+# Ignore IDE files
+.idea
+
 # Ignore OAuth client ID credentials
 credentials.json
 StoredCredential
