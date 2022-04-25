@@ -116,7 +116,7 @@ public class GmailManager {
             ListMessagesResponse messagesResponse = query.execute();
             List<Message> messages = messagesResponse.getMessages();
 
-            if (messages.size() > 0) {
+            if (messages != null) {
                 logger.debug("Found {} unprocessed report emails", messages.size());
 
                 // This relies on ListMessagesResponse being ordered by date/time email arrives in inbox
