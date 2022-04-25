@@ -34,9 +34,11 @@ and uploading them directly to Google Sheets.
 - You must write your own handlers for processing each report section!
   - Example files are already configured under `src/main/java/dataprocessing/reportpage/`
   - Edit the `processDataSection` method:
-    - It has a CSV in string format as a parameter.
+    - Its parameter is a CSV in string.
+      - The format of the given CSV parameter is the same as that in the email attachment, but of a single section without its section name
+      - Strings are delimited by `\n` for each row, and `,` for each cell within.
     - It must return a CSV in string format.
-    - The format of the given CSV parameter is the same as that in the email attachment, but of a single section without its section name
+    
 - By default, if you do not change the processing classes, the report CSV remains unchanged.
 
 ### Uploading reports
